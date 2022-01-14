@@ -26,6 +26,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-bottom: #92817a solid 16px;
 }
 
 .logo {
@@ -38,12 +39,14 @@ body {
 
 .button-group {
   display: flex;
-  gap: 24px;
+  justify-content: center;
+  gap: 16px;
 }
 
 .btn {
   flex: 0;
-  height: 30px;
+  min-width: 100px;
+  height: 40px;
   background-color: #92817a;
   color: white;
   border: none;
@@ -51,25 +54,24 @@ body {
   font-size: 16px;
 }
 
-.btn:hover {
-  border-bottom: white solid;
-  transition: 0.2s;
+.btn-active.btn {
+  border-bottom: white solid 4px;
+  transition: 0.1s;
 }
 
 #content {
   display: flex;
-  flex: 0;
   flex-shrink: 0;
   background-color: #92817a;
-  width: 700px;
-  min-height: 600px;
+  width: 800px;
   margin: 100px 0;
   border: #362417 solid 16px;
   border-radius: 16px;
 }
 
-.tab-content {
+.home-content {
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
   flex-shrink: 0;
@@ -91,6 +93,57 @@ body {
 .bottom {
   color: white;
   font-size: 24px;
+}
+
+#menu-content {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+
+  width: 100%;
+  margin: 32px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#menu-container {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 24px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex-grow: 0;
+  align-items: center;
+  text-align: center;
+  width: 300px;
+  height: 200px;
+  background-color: #f1dabf;
+  border: #362417 solid 2px;
+  border-radius: 16px;
+  margin: 16px;
+}
+
+#contact-content {
+  min-height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 24px;
+  color: white;
+}
+
+.textpadding {
+  padding: 8px;
 }
 
 #footer {

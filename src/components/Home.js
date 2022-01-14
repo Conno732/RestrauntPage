@@ -5,7 +5,7 @@ import { htmlGen } from "./HTML_helper";
 const homepage = () => {
   const home = document.createElement("div");
 
-  home.classList = "tab-content";
+  home.classList = "home-content";
 
   home.appendChild(
     htmlGen.makeP("Food that makes you say '?!?!'", "attention")
@@ -20,6 +20,8 @@ const homepage = () => {
   home.appendChild(
     htmlGen.makeP("Order now for pickup or delivery.", "bottom")
   );
+
+  home.appendChild(htmlGen.makeP("Open all day from 9am-2pm", "bottom"));
 
   return home;
 };

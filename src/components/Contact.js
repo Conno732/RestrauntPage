@@ -1,11 +1,16 @@
+import { htmlGen } from "./HTML_helper";
+
 //Create the contact and return the div containing it
 const contact = () => {
   const contact = document.createElement("div");
+  contact.id = "contact-content";
 
-  const aboveText = document.createElement("p");
-  aboveText.innerText = "We currently do not have a phone yet, sorry";
-
-  contact.appendChild(aboveText);
+  contact.appendChild(htmlGen.makeP("Sorry "));
+  contact.appendChild(
+    htmlGen.makeP(
+      "We are close while indefinetly until the salad shortage is over"
+    )
+  );
 
   return contact;
 };
